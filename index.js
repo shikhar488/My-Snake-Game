@@ -95,9 +95,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // wall collision checks
         const hitLeftWall = snake[0].x < 0; // snake[0] -> head
-        const hitRightWall = snake[0].x > arenaSize - cellSize;
+        const hitRightWall = snake[0].x >= arenaSize - cellSize;
         const hitTopWall = snake[0].y < 0;
-        const hitBottomWall = snake[0].y > arenaSize - cellSize;
+        const hitBottomWall = snake[0].y >= arenaSize - cellSize;
         return hitLeftWall || hitRightWall || hitTopWall || hitBottomWall;
     }
 
